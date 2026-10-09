@@ -1,0 +1,24 @@
+{
+  "scope": "HTTP round trip, request validation, Redis history/cache, FAISS, feature computation, LambdaMART; loopback, single sequential client",
+  "warmup": 20,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "workers": 1,
+  "concurrency": 1,
+  "redis_version": "7.0.15",
+  "measurements_ms": {
+    "uncached": {
+      "samples": 500,
+      "p50": 5.597536,
+      "p95": 10.680294449999996,
+      "p99": 16.599981919999994,
+      "max": 22.279802
+    },
+    "cached": {
+      "samples": 500,
+      "p50": 2.295394,
+      "p95": 5.391444949999998,
+      "p99": 8.190804479999999,
+      "max": 21.1296
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "task": "Last-word prediction: remove the final word of each full query of >=3 words; exact normalized token match",
+  "all_test_queries_in_denominator": true,
+  "misses_count_as_incorrect": true,
+  "test_start_utc": "2006-05-10T13:46:14+00:00",
+  "full_query_3plus_words": {
+    "global_frequency": {
+      "queries": 17667,
+      "top1": 0.1452991452991453,
+      "top5": 0.14756325352351843,
+      "mrr": 0.1623766456168263,
+      "ndcg5": 0.14630356040860623,
+      "candidate_recall": 0.5186505914982736,
+      "top5_wilson95": [
+        0.14240996194724903,
+        0.15286978296314618
+      ]
+    },
+    "lexical_frequency": {
+      "queries": 17667,
+      "top1": 0.23648610403577291,
+      "top5": 0.31584309730005095,
+      "mrr": 0.2780476194797376,
+      "ndcg5": 0.2795776058740218,
+      "candidate_recall": 0.5186505914982736,
+      "top5_wilson95": [
+        0.30902906449022105,
+        0.32273720067736444
+      ]
+    },
+    "semantic": {
+      "queries": 17667,
+      "top1": 0.20235467255334805,
+      "top5": 0.2731080545650082,
+      "mrr": 0.24146035745285627,
+      "ndcg5": 0.24084898454340334,
+      "candidate_recall": 0.5186505914982736,
+      "top5_wilson95": [
+        0.2665877357125583,
+        0.27972702498338947
+      ]
+    },
+    "lambdamart_no_history": {
+      "queries": 17667,
+      "top1": 0.24837267221373183,
+      "top5": 0.3417105337635139,
+      "mrr": 0.29035128758705325,
+      "ndcg5": 0.29919738039190585,
+      "candidate_recall": 0.4006905530084338,
+      "top5_wilson95": [
+        0.33475183570122696,
+        0.3487380553518398
+      ]
+    },
+    "personalized_lambdamart": {
+      "queries": 17667,
+      "top1": 0.39440765268579836,
+      "top5": 0.4675383483330503,
+      "mrr": 0.42759420937345005,
+      "ndcg5": 0.4340152219171716,
+      "candidate_recall": 0.5186505914982736,
+      "top5_wilson95": [
+        0.46018874955452616,
+        0.47490206128721657
+      ]
+    }
+  },
+  "typed_prefix_3plus_words": {
+    "global_frequency": {
+      "queries": 8962,
+      "top1": 0.0643829502343227,
+      "top5": 0.06817674626199509,
+      "mrr": 0.08422492406346994,
+      "ndcg5": 0.06604370102908945,
+      "candidate_recall": 0.48716804284757864,
+      "top5_wilson95": [
+        0.06314119444057457,
+        0.07358234526594888
+      ]
+    },
+    "lexical_frequency": {
+      "queries": 8962,
+      "top1": 0.16982816335639367,
+      "top5": 0.2682436956036599,
+      "mrr": 0.21941066731364234,
+      "ndcg5": 0.22304383230219682,
+      "candidate_recall": 0.48716804284757864,
+      "top5_wilson95": [
+        0.2591716309880694,
+        0.2775143617691527
+      ]
+    },
+    "semantic": {
+      "queries": 8962,
+      "top1": 0.13311760767685785,
+      "top5": 0.20899352823030573,
+      "mrr": 0.17519141684136033,
+      "ndcg5": 0.1740451704885948,
+      "candidate_recall": 0.48716804284757864,
+      "top5_wilson95": [
+        0.20070107434982892,
+        0.21753535757642767
+      ]
+    },
+    "lambdamart_no_history": {
+      "queries": 8962,
+      "top1": 0.19270252175853603,
+      "top5": 0.2933496987279625,
+      "mrr": 0.23841381889232338,
+      "ndcg5": 0.2476641774819005,
+      "candidate_recall": 0.3607453693372015,
+      "top5_wilson95": [
+        0.28401338456519964,
+        0.3028631000695501
+      ]
+    },
+    "personalized_lambdamart": {
+      "queries": 8962,
+      "top1": 0.35695157330952915,
+      "top5": 0.43204641821022094,
+      "mrr": 0.39085242478132814,
+      "ndcg5": 0.39731564701801564,
+      "candidate_recall": 0.48716804284757864,
+      "top5_wilson95": [
+        0.4218217561674403,
+        0.44232931248405144
+      ]
+    }
+  },
+  "test_known_history": 17667,
+  "test_empty_history": 0,
+  "engine_latency_ms": {
+    "samples": 17647,
+    "warmup": 20,
+    "p50": 2.792227,
+    "p95": 6.346095600000003,
+    "p99": 9.688374700000002,
+    "scope": "uncached in-process retrieval+history feature computation+LightGBM; excludes HTTP and Redis"
+  },
+  "machine": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "threads": 1
+  },
+  "dependencies": {
+    "torch": "2.14.1+cpu",
+    "lightgbm": "4.7.0",
+    "faiss-cpu": "1.15.1",
+    "redis": "8.1.0",
+    "fastapi": "0.143.0",
+    "numpy": "2.3.5"
+  }
+}

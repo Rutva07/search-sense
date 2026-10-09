@@ -1,0 +1,2 @@
+{'prefix': 'best hotels in', 'suggestions': [{'word': 'san', 'completion': 'best hotels in san', 'score': -0.08378670375234082}, {'word': 'zanesville', 'completion': 'best hotels in zanesville', 'score': -0.20686634367338388}, {'word': 'alabama', 'completion': 'best hotels in alabama', 'score': -0.3680012560836335}, {'word': 'texas', 'completion': 'best hotels in texas', 'score': -0.3707162413850012}, {'word': 'houston', 'completion': 'best hotels in houston', 'score': -0.6174186138274018}], 'candidate_count': 45, 'history_size': 0, 'cache_hit': False}
+{'status': 'recorded'}

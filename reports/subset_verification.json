@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "canonical_event_sha256": "9243b7c761503dcff5c914e3ea8ed014ba2a4c8f77ad914c3d2005ae2765f6ea",
+  "raw_rows": 250000,
+  "events": 188398,
+  "users": 1549,
+  "cutoffs": [
+    1144358985,
+    1146411094,
+    1147268774
+  ],
+  "description": "Re-ingested bundled real TSV sample and compared every chronological event with the experiment database"
+}

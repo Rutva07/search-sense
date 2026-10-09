@@ -1,0 +1,23 @@
+6:C 09 Oct 2026 21:11:25.139 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+6:C 09 Oct 2026 21:11:25.139 # Redis version=7.0.15, bits=64, commit=00000000, modified=0, pid=6, just started
+6:C 09 Oct 2026 21:11:25.139 # Configuration loaded
+6:M 09 Oct 2026 21:11:25.140 * monotonic clock: POSIX clock_gettime
+6:M 09 Oct 2026 21:11:25.140 * Running mode=standalone, port=16379.
+6:M 09 Oct 2026 21:11:25.140 # Server initialized
+6:M 09 Oct 2026 21:11:25.140 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+6:M 09 Oct 2026 21:11:25.141 * Ready to accept connections
+INFO:     Started server process [11]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51200 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51210 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51210 - "POST /complete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51210 - "POST /observe HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11]
+6:signal-handler (1791551493) Received SIGTERM scheduling shutdown...
+6:M 09 Oct 2026 21:11:33.460 # User requested shutdown...
+6:M 09 Oct 2026 21:11:33.460 # Redis is now ready to exit, bye bye...

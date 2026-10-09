@@ -1,0 +1,92 @@
+{
+  "seed": 42,
+  "dataset": {
+    "source": "https://cim.mcgill.ca/~dudek/206/Logs/AOL-user-ct-collection/",
+    "inputs": [
+      {
+        "file": "user-ct-test-collection-02.txt.gz",
+        "sha256": "07ee3370992954a69abc84c39bc7bb5f87dd670867088a5e04ddd238ed4b06f1",
+        "bytes": 45909232
+      }
+    ],
+    "raw_rows_read": 250000,
+    "invalid_rows": 5960,
+    "deduplicated_events": 188398,
+    "users": 1549,
+    "first_timestamp": 1141171465,
+    "last_timestamp": 1149119973,
+    "cutoffs": [
+      1144358985,
+      1146411094,
+      1147268774
+    ],
+    "max_rows": 250000,
+    "sampling": "first N raw rows in file order (not a random or representative sample)"
+  },
+  "encoder": {
+    "vocabulary_size": 6000,
+    "training_pairs": 139908,
+    "all_usable_pairs": 139908,
+    "epochs": 5,
+    "losses": [
+      6.42886611833667,
+      4.801940584563097,
+      4.0869004569427325,
+      3.6620410361522966,
+      3.374027961195512
+    ],
+    "dimension": 64,
+    "seed": 42
+  },
+  "ranker_train": {
+    "eligible_queries": 17225,
+    "candidate_misses": 7702,
+    "rankable_groups": 9523,
+    "sampled_groups": 9523
+  },
+  "ranker_validation": {
+    "eligible_queries": 9140,
+    "candidate_misses": 4387,
+    "rankable_groups": 4753,
+    "sampled_groups": 3000
+  },
+  "best_iteration": 199,
+  "features": [
+    "log_global_frequency",
+    "log_prefix_frequency",
+    "log_last_word_frequency",
+    "context_word_cosine",
+    "neural_next_word_logit",
+    "log_history_word_frequency",
+    "log_history_prefix_frequency",
+    "recent_history_weight",
+    "history_context_cosine",
+    "prefix_length",
+    "history_size",
+    "global_recency"
+  ],
+  "feature_importance_gain": {
+    "log_global_frequency": 34472.81100177765,
+    "log_prefix_frequency": 12488.595742702484,
+    "log_last_word_frequency": 94559.75582671165,
+    "context_word_cosine": 74671.32848024368,
+    "neural_next_word_logit": 133119.80395841599,
+    "log_history_word_frequency": 11241.932480335236,
+    "log_history_prefix_frequency": 282513.90990924835,
+    "recent_history_weight": 241645.94416999817,
+    "history_context_cosine": 4078.5082845687866,
+    "prefix_length": 1016.5324573516846,
+    "history_size": 757.4645404815674,
+    "global_recency": 1595.8507843017578
+  },
+  "training_seconds": 149.37117847700006,
+  "split_policy": "retrieval/encoder <c0; LambdaMART c0<=t<c1; validation c1<=t<c2; test t>=c2",
+  "history_policy": "strictly earlier timestamps; bounded last 50 searches; predict then observe",
+  "artifact_sha256": {
+    "ranker.txt": "d275ee4354d1a4ca793440fce20fe759c599442973e26039cde9b9986a5f6e99",
+    "retrieval.json": "6d5d0afaef166205ae3cfda259fd21dee5d038ee023e810628668f53dc223d69",
+    "vocabulary.json": "aaff435460303de28bd862f6c4b8c917f5806dbc890b34150f6cac9cdbe8b336",
+    "encoder.pt": "22275d721572062a0901251385716e9765df363ca855ff404ac563dc9c112ae2",
+    "words.faiss": "585cd9b4d8ee56d23f80bc0fe28c18658410e2e106cfcf2cdf0e8d162d98c972"
+  }
+}

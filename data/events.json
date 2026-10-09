@@ -1,0 +1,23 @@
+{
+  "source": "https://cim.mcgill.ca/~dudek/206/Logs/AOL-user-ct-collection/",
+  "inputs": [
+    {
+      "file": "user-ct-test-collection-02.txt.gz",
+      "sha256": "07ee3370992954a69abc84c39bc7bb5f87dd670867088a5e04ddd238ed4b06f1",
+      "bytes": 45909232
+    }
+  ],
+  "raw_rows_read": 250000,
+  "invalid_rows": 5960,
+  "deduplicated_events": 188398,
+  "users": 1549,
+  "first_timestamp": 1141171465,
+  "last_timestamp": 1149119973,
+  "cutoffs": [
+    1144358985,
+    1146411094,
+    1147268774
+  ],
+  "max_rows": 250000,
+  "sampling": "first N raw rows in file order (not a random or representative sample)"
+}

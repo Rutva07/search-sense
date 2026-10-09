@@ -1,0 +1,7 @@
+{
+  "source": "https://cim.mcgill.ca/~dudek/206/Logs/AOL-user-ct-collection/user-ct-test-collection-02.txt.gz",
+  "source_sha256": "07ee3370992954a69abc84c39bc7bb5f87dd670867088a5e04ddd238ed4b06f1",
+  "selection": "header + first 250000 original TSV data lines; no synthetic queries",
+  "subset_file": "aol_shard02_first250k.tsv.gz",
+  "subset_sha256": "9861ef6a2085b2c422ab8c89e43607acfb55d8897a4e1306b924ec241cb97eee"
+}
