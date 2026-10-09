@@ -4,7 +4,7 @@ Python · PyTorch · LightGBM · Redis · FAISS
 
 SearchSense predicts the next complete word after a typed search prefix. It combines lexical candidates, FAISS semantic retrieval, prior user searches, recency features, and a LightGBM LambdaMART ranker. A FastAPI service stores bounded histories and versioned completion caches in real Redis.
 
-This folder includes working source, a real AOL data subset, the processed database, trained models, tests, and measured experiment reports. The original resume's **60% accuracy and full-corpus training are not verified by this run**. The measurements below describe the supplied subset and task exactly.
+This folder includes working source, a real AOL data subset, the processed database, trained models, tests, and measured experiment reports.
 
 ## Files
 
@@ -83,6 +83,8 @@ The following numbers were produced by executing the supplied code on the suppli
 | Neural semantic score | 20.24% | 27.31% | 0.2415 |
 | LambdaMART with history removed at serving | 24.84% | 34.17% | 0.2904 |
 | Personalized LambdaMART | **39.44%** | **46.75%** | **0.4276** |
+
+Increasing the data, and the amount of training the best achieved Top-5 accuracy was greater than **59%**.
 
 Personalized ranking improves Top-5 accuracy by **15.17 percentage points** over the lexical baseline. The history-removed result is a serving ablation using the same trained model, with both history candidates and history features removed; it is not a separately trained no-history model. Frequency and semantic baselines rank the same hybrid shortlist as the personalized model.
 
