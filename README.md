@@ -84,7 +84,7 @@ The following numbers were produced by executing the supplied code on the suppli
 | LambdaMART with history removed at serving | 24.84% | 34.17% | 0.2904 |
 | Personalized LambdaMART | **39.44%** | **46.75%** | **0.4276** |
 
-Increasing the data, and the amount of training the best achieved Top-5 accuracy was greater than **59%**.
+Increasing the data, and the amount of training the best achieved Top-5 accuracy was greater than **56.71%**.
 
 Personalized ranking improves Top-5 accuracy by **15.17 percentage points** over the lexical baseline. The history-removed result is a serving ablation using the same trained model, with both history candidates and history features removed; it is not a separately trained no-history model. Frequency and semantic baselines rank the same hybrid shortlist as the personalized model.
 
